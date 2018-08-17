@@ -1,6 +1,6 @@
 {
   "name": "akserver",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "personal nodejs web server",
   "main": "src/app.js",
   "bin": "bin/akServer",
@@ -15,12 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ak-lee/anywhere.git"
+    "url": "git+git@github.com:Ak-lee/akserver.git"
   },
   "author": "ak-lee",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Ak-lee/anywhere/issues"
+    "url": "https://github.com/Ak-lee/akserver/issues"
   },
-  "homepage": "https://github.com/Ak-lee/anywhere#readme"
+  "homepage": "https://github.com/Ak-lee/akserver#readme"
 }
