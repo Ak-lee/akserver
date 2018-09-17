@@ -31,6 +31,7 @@ module.exports = async function (req, res, filePath, config) {
             rs.pipe(res)
         } else if(stats.isDirectory()) {
             const files = await readdir(filePath)
+            var readmeContent = ''
             for (var i =0; i<files.length; i++){
                 let testPath = path.join(filePath, files[i])
                 let stats = await stat(testPath)
@@ -40,6 +41,9 @@ module.exports = async function (req, res, filePath, config) {
                         icon: 'dir'
                     }
                 }else{
+                    if(files[i] === 'README.md' || 'readme.txt'){
+                        readmeContent = fs.readFileSync(testPath)
+                    }
                     files[i] = {
                         file: files[i],
                         icon: mime(files[i]).icon
@@ -54,6 +58,7 @@ module.exports = async function (req, res, filePath, config) {
                 dir: dir ? `/${dir}` : '',
                 files,
                 prevDir,
+                readmeContent,
             }
             res.statusCode = 200
             res.setHeader('Content-Type', 'text/html')

@@ -1,6 +1,6 @@
 {
   "name": "akserver",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "personal nodejs web server",
   "main": "src/app.js",
   "bin": "bin/akServer",

@@ -20,6 +20,12 @@
             fill: currentColor;
             overflow: hidden;
         }
+        #readme-wrapper{
+            width: 98%;
+            margin: 10px auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
@@ -37,6 +43,11 @@
             {{file}}
         </a>
     {{/each}}
+    <div id="readme-wrapper">
+        {{#if readmeContent}}
+            {{readmeContent}}
+        {{/if}}
+    </div>
     <script src='//at.alicdn.com/t/font_794925_9l3dkg0rnqe.js' ></script>
 </body>
 </html>
