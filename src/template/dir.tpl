@@ -43,11 +43,11 @@
             {{file}}
         </a>
     {{/each}}
-    <div id="readme-wrapper">
+    <pre id="readme-wrapper">
         {{#if readmeContent}}
             {{readmeContent}}
         {{/if}}
-    </div>
+    </pre>
     <script src='//at.alicdn.com/t/font_794925_9l3dkg0rnqe.js' ></script>
 </body>
 </html>
